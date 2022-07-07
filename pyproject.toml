@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "fastapi-graphql"
+version = "0.1.0"
+description = ""
+authors = ["femtozer <eliott.benoit@devoteamgcloud.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.78.0"
+prisma = "^0.6.6"
+strawberry-graphql = {extras = ["debug-server", "fastapi"], version = "^0.117.0"}
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+flake8 = "mypy"
+mypy = "^0.961"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+plugins = "pydantic.mypy"
+ignore_missing_imports = true
+disallow_untyped_defs = true
+
+[tool.black]
+line-length = 99 # override black's default line-length
+exclude = '(\.git|\.mypy_cache|\.tox|venv|\.venv|_build|buck-out|build|dist)'
+
+[tool.isort]
+profile = "black"

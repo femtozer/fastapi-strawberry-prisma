@@ -1,0 +1,22 @@
+generator client {
+    provider  = "prisma-client-py"
+    interface = "asyncio"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+enum Priority {
+    low
+    medium
+    high
+}
+
+model Todo {
+    id          String    @id @default(cuid()) @db.VarChar(255)
+    title       String?   @db.VarChar(255)
+    description String?   @db.VarChar(255)
+    priority    Priority?
+}
