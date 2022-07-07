@@ -9,6 +9,7 @@ python = "^3.9"
 fastapi = "^0.78.0"
 prisma = "^0.6.6"
 strawberry-graphql = {extras = ["debug-server", "fastapi"], version = "^0.117.0"}
+uvicorn = {extras = ["standard"], version = "^0.18.2"}
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"

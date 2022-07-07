@@ -9,7 +9,7 @@ services:
         'sh',
         '-c',
         # sleep so db has time to startup
-        'sleep 10 && pip install debugpy && python -m debugpy --listen 0.0.0.0:5678 -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000'
+        'sleep 20 && pip install debugpy && python -m debugpy --listen 0.0.0.0:5678 -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000'
       ]
     volumes:
       - .:/code

@@ -1,11 +1,11 @@
-# Digital Lab - Minimal Seed
+# FastAPI + Strawberry + Prisma example
 
 ## Stack
 
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Strawberry](https://strawberry.rocks/)
 - [Prisma](https://prisma-client-py.readthedocs.io/en/stable/)
-- [Postgres](https://www.postgresql.org/)
+- [Poetry](https://python-poetry.org/)
 
 ## Run app
 
