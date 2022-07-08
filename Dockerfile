@@ -22,10 +22,12 @@ RUN apt-get update \
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-COPY ./.env* /code/.env
-COPY ./app /code/app
 COPY ./prisma /code/prisma
 
 RUN prisma generate
+
+COPY ./.env* /code/.env
+
+COPY ./app /code/app
 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
